@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.nuroko</groupId>
 	<artifactId>nuroko-pom</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<packaging>pom</packaging>
 	<name>Parent pom for Nuroko projects</name>
 
@@ -16,7 +16,8 @@
 		<connection>scm:git:git@github.com:nuroko/${project.artifactId}.git</connection>
 		<url>scm:git:git@github.com:nuroko/${project.artifactId}.git</url>
 		<developerConnection>scm:git:git@github.com:nuroko/${project.artifactId}.git</developerConnection>
-	</scm>
+	  <tag>nuroko-pom-0.0.2</tag>
+  </scm>
 
 	<prerequisites>
 		<maven>2.2.1</maven>
