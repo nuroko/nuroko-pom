@@ -5,6 +5,12 @@
 	<version>0.0.8-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Parent pom for Nuroko projects</name>
+	
+	<parent>
+		<groupId>net.mikera</groupId>
+		<artifactId>mikera-pom</artifactId>
+		<version>0.5.0</version>
+	</parent>
 
 	<url>https://github.com/nuroko/${project.artifactId}.git</url>
 
@@ -50,7 +56,7 @@
 			<plugin> <!-- Stops over-strict Javadoc generation from breaking builds -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9.1</version>
+				<version>2.10.3</version>
 				<configuration>
 					<additionalparam>-Xdoclint:none</additionalparam>
 				</configuration>
@@ -59,21 +65,21 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
+				<version>3.3</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.0</version>
+				<version>2.2</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4</version>
+				<version>2.5.2</version>
 				<configuration>
 					<mavenExecutorId>forked-path</mavenExecutorId><!-- Needed to stop hang 
 						with GPG passphrase. Odd but true.... -->
@@ -115,7 +121,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.4</version>
+						<version>1.6</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
